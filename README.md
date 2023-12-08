@@ -32,7 +32,6 @@ C dilinde kodun bağlantısı:https://1drv.ms/u/s!AktJHM3hppwRhhl_S9FVs1uqPJZX?e
 
 
 **KOD**
-
 #include <stdio.h>
 
 #include <string.h>
