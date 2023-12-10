@@ -11,10 +11,18 @@ Algoritma sifreleme ödevi:
 
 2)Deşifreleme
 
-3)Programı sonlandırma
 
-Programdaki harfler İngiliz alfabesine göre ayarlanmıştır.Türkçe harf girişinde program hata verebilir.Türkce harf girmeye özen gösterin.Harf dışında sayı girildiğinde program hata verip başa döndürecektir.
 
+Programdaki harfler İngiliz alfabesine göre ayarlanmıştır.Türkçe harf girişinde program hata verebilir.Türkce harf girmeye özen gösterin.
+Harf dışında sayı girildiğinde program hata verip başa döndürecektir.
+
+Mevcut Dosya Üzerinden İşlem seçeneği seçildiği surette "input.txt" adlı dosya baz alınacak ve işlemler bu dosya üzerinden yürütülecektir.
+Yeni Dosya Oluşturma seçeneği seçildiği surette program size özel bir "input.txt" dosyası oluşturacaktır.
+Bunun haricinde kullanıcı, takviye olarak yeni bir dosya oluşturmak isterse "exe." dosyasının klasörüne yeni bir "txt." dosyası oluşturabilir ve kod içine yeni oluşturulan dosyanın adını entegre edebilir.
+ 
+ 
+ 
+ 
  PROGRAMIN MANTIĞI:
 
 
