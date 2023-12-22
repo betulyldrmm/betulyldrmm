@@ -1,5 +1,6 @@
 ---ALGORİTMA ÖDEVİ:AÇIK ARTIRMA UYGULAMASI ---
 Bu program bir açık artırma uygulamasıdır.
+
 Bu program katılımcılardan teklif girmesini isteycektir.Programın amacı girilen değerler arasında en yüksek olanı seçmektir.
 
 C programlama dilinde, struct (yapı), bir bellek bloğunda tek bir ad altında fiziksel olarak gruplandırılmış değişkenler listesini tanımlayan ve farklı değişkenlere tek bir işaretçi (pointer) aracılığıyla erişilmesine izin veren bileşik bir veri türüdür. 
