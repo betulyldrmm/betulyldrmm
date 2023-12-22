@@ -28,18 +28,22 @@ Bir etaptan diğerine gecmek için "e" harfine basarsanız diğer etaba gecebili
 // Açık artırma için bir yapı (struct) tanımlanıyor
 typedef struct AcikArtirma {
     double odeme;               // Toplam ödeme miktarı
+   
     int kazanan_no;             // Kazanan katılımcının numarası
+   
     double en_yuksek_teklif;    // En yüksek teklif miktarı
     int katilimci_sayisi;       // Katılan katılımcı sayısı
     double teklifler[MAX_KATILIMCI];  // Katılımcıların teklifleri
 } AçıkArtırma;  // typedef ile yapıyı AçıkArtırma adı altında tanımlıyoruz
 
 // Kazananın bilgilerini ekrana yazdırmak için bir fonksiyon tanımlanıyor
+
 void goster_kazanan(int kazanan_no, double teklif) {
     printf("Kazanan katilimci: %d, Teklif: %.2f\n", kazanan_no + 1, teklif);
 }
 
 // Şu an kullanılmayan ödeme hesaplama fonksiyonu
+
 double hesapla_odeme(AcikArtirma *a, int kazanan_no) {
     return a->odeme;  // Açık artırma yapısı içindeki ödeme miktarını geri döndürür
 }
@@ -50,9 +54,13 @@ void goster_odeme(double odeme) {
 }
 
 int main() {
+   
     // Açık artırma yapısı oluşturuluyor ve başlangıç değerleri atanıyor
+   
     struct AcikArtirma a = {0.0, -1, -1.0, 0, {0}};
+    
     int kisi_sayisi;  // Kullanıcıdan alınacak katılımcı sayısını tutacak değişken
+    
     char devam;  // Kullanıcının devam etmek isteyip istemediğini tutacak değişken
 
     while (1) { // Sonsuz bir döngü başlatılıyor
