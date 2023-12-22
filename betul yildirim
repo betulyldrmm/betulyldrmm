@@ -6,6 +6,9 @@ C programlama dilinde, struct (yapı), bir bellek bloğunda tek bir ad altında 
 Struct veri tipi, başka veri türlerini içerebilir.
 Typedef ise ifadesini kullanarak, standart veri türlerinini (int, char, float, vs.) veya kullanıcı tanımlı yapıları farklı isimlerle tanımlayabiliriz.
 
+Mevcut Dosya Üzerinden İşlem seçeneği seçildiği surette "input.txt" adlı dosya baz alınacak ve işlemler bu dosya üzerinden yürütülecektir. Yeni Dosya Oluşturma seçeneği seçildiği surette program size özel bir "input.txt" dosyası oluşturacaktır. 
+Bunun haricinde kullanıcı, takviye olarak yeni bir dosya oluşturmak isterse "exe." dosyasının klasörüne yeni bir "txt." dosyası oluşturabilir ve kod içine yeni oluşturulan dosyanın adını entegre edebilir.
+
 
 
 ****PROGRAMIN MANTIĞI***
