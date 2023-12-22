@@ -1,0 +1,79 @@
+   ALGORİTMA ÖDEVİ:AÇIK ARTIRMA UYGULAMASI 
+Bu program bir açık artırma uygulamasıdır.
+Bu program katılımcılardan teklif girmesini isteycektir.Programın amacı girilen değerler arasında en yüksek olanı seçmektir.
+
+C programlama dilinde, struct (yapı), bir bellek bloğunda tek bir ad altında fiziksel olarak gruplandırılmış değişkenler listesini tanımlayan ve farklı değişkenlere tek bir işaretçi (pointer) aracılığıyla erişilmesine izin veren bileşik bir veri türüdür. 
+Struct veri tipi, başka veri türlerini içerebilir.
+Typedef ise ifadesini kullanarak, standart veri türlerinini (int, char, float, vs.) veya kullanıcı tanımlı yapıları farklı isimlerle tanımlayabiliriz.
+
+
+
+****PROGRAMIN MANTIĞI***
+Program ilk önce kaç tane katılımcı oldugunun belirlenmesini isteyecektir.Örneğin katılımcı 5 ise hepsi bir teklif verecektir.Program hangisinin teklifi en yüksekse onu seçecekktir ve kazananı belirleyecektir.
+Programda sonsuz bi döngü olacak şekilde etaplar vardır.İlk etap böylece bitecektir ardından eger katılımcılardan bazıları ya da hepsi daha yüksek bir teklif vermek isterlerse ikinci etaba gecilebilir.
+Bir etaptan diğerine gecmek için "e" harfine basarsanız diğer etaba gecebilirsiniz eger "h" ye basarsanız program duracaktır.
+
+
+
+
+******PROGRAMIN KODU******
+
+#include <stdio.h>
+
+#define MAX_KATILIMCI 100
+
+typedef struct AcikArtirma {
+    double odeme;
+    int kazanan_no;
+    double en_yuksek_teklif;
+    int katilimci_sayisi;
+    double teklifler[MAX_KATILIMCI];
+} AcikArtirma;
+
+void goster_kazanan(int kazanan_no, double teklif) {
+    printf("Kazanan katilimci: %d, Teklif: %.2f\n", kazanan_no + 1, teklif);
+}
+
+double hesapla_odeme(AcikArtirma *a, int kazanan_no) {
+    return a->odeme;
+}
+
+void goster_odeme(double odeme) {
+    printf("Toplam odeme: %.2f\n", odeme);
+}
+
+int main() {
+    struct AcikArtirma a = {0.0, -1, -1.0, 0, {0}};
+    int kisi_sayisi;
+    char devam;
+
+    while (1) {
+        printf("Kac kisi katilacak: ");
+        scanf("%d", &kisi_sayisi);
+
+        printf("Katilimcilarin tekliflerini girin:\n");
+        int i;
+        for (i = 0; i < kisi_sayisi; ++i) {
+            printf("Katilimci %d'in teklifi: ", i + 1);
+            scanf("%lf", &a.teklifler[i]);
+
+            if (a.teklifler[i] > a.en_yuksek_teklif) {
+                a.en_yuksek_teklif = a.teklifler[i];
+                a.kazanan_no = i;
+            }
+        }
+
+        a.katilimci_sayisi = kisi_sayisi;
+
+        goster_kazanan(a.kazanan_no, a.teklifler[a.kazanan_no]);
+
+        printf("Devam etmek istiyor musunuz? (e/h): ");
+        scanf(" %c", &devam);
+
+        if (devam == 'h' || devam == 'H') {
+            break;
+        }
+    }
+
+    return 0;
+}
