@@ -1,5 +1,6 @@
 Algoritma sifreleme ödevi:
 
+
 *Bu program  sifreleme ve deşifreleme yöntemlerine dayanan  bir programdır.
 
 *Bu programda harfler kullanıcının istediği miktarda kayar yani ötelenir.Eğer kullanıcı bir harfi ötelemek isterse 1. seçeneği seçer eger bir kelimenin içindeki bütün harfleri ötelemek isterse bu seferde 2. Seçeneği seçer.
